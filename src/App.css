@@ -1,63 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Blaka&family=Raleway:wght@100&display=swap');
-.home{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-    background-color: aquamarine;
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dosis&family=Raleway:wght@100&display=swap');
+.home {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background-color: aquamarine;
 }
-.home-first{
-    padding: 1%;
-    width: 50%;
-    align-items: center;
+.home-first {
+  padding: 1%;
+  width: 50%;
+  align-items: center;
 }
-.home-first p{
-    font-family: 'Amatic SC', cursive;
-    font-size: 1.3em;
+.home-first p {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.3em;
 }
-.home-first h1{
-    font-family: 'Raleway', sans-serif;
-    font-size: 3em;
-    color: rgb(34, 34, 82);
-    padding: 1%;
-    width: fit-content;
+.home-first h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  color: rgb(34, 34, 82);
+  padding: 1%;
+  width: fit-content;
 }
-.home-first h2{
-    font-family: 'Raleway', sans-serif;
+.home-first h2 {
+  font-family: "Raleway", sans-serif;
 }
-.home-second{
-    padding: 1%;
-    width: 50%;
-    align-items: center;
+.home-second {
+  padding: 1%;
+  width: 50%;
+  align-items: center;
 }
-.home-second img{
-    width: 100%;
-    height: 100%;
+.home-second img {
+  width: 100%;
+  height: 100%;
 }
-.about{
-    width: 100%;
-    height: 100vh;
-    background-color: aquamarine;
+.about {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40% 60%;
+  grid-template-areas: 
+    "abtone abttwo"
+    "abtone abtthree"
+  ;
+  background-color: aquamarine;
 }
-.about-wrapper{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
+.about-one{
+ grid-area: abtone;
+ 
 }
-.personal{
-    width: 50%;
+.about-one img{
+  height: 100%;
 }
-.details{
-    display: flex;
-    flex-direction: column;
+.about-two{
+  grid-area: abttwo;
+  
 }
-.details li{
-    list-style: none;
+.about-three{
+  grid-area: abtthree;
+  
 }
-.spanBold{
-    font-weight: bold;
+.dumeel{
+  background-color: black;
+  width: 300px;
+  height: 200px;
 }
-.skills{
-    width: 50%;
+.techstack{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 2%;
+}
+.techstack li{
+  list-style: none;
+  margin: 1%;
+  color: aliceblue;
+  border: 1px solid rgb(31, 101, 70); 
+  border-radius: 25px;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+  margin: 2%;
+  background-color: #070706;
+  padding: 2%;
+  font-family: 'Dosis', sans-serif;
+}
+.sociallinks li a{
+  text-decoration: none;
+  color: aliceblue;
+  cursor: pointer;
+}
+.sociallinks li a:hover{
+  background-color: aliceblue;
+  color: #070706;
 }
