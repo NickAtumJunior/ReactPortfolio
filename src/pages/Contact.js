@@ -1,27 +1,14 @@
-import React from 'react'
-import { motion } from "framer-motion"
+import React from "react";
 
 function Contact() {
   return (
-    <div>
-       
-
-
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{ duration: 2 }}
-    className='dumeel'
-  />
-
-<motion.div
-  animate={{ x: 100 }}
-  transition={{ ease: "easeOut", duration: 2 }}
-  className='dumeel'
-/>
-
-
+    <div className="contact">
+      <div className="contact-left">{/* this is for empty space */}</div>
+      <div className="contact-right">
+        {/* this is for form */}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 function Error() {
+ 
   return (
     <div>
       <center><img alt='error-bot' src='https://drive.google.com/uc?export=download&id=1IZwaBDnqEVospSb40O17kcJaDcIFhV5e'/></center>
