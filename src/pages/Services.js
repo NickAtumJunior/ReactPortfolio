@@ -6,7 +6,7 @@ function Services() {
     pace: (char) => (char === " " ? 50 : 80)
    })
 
-   const [design] = useWindupString("Design",{
+   const [design] = useWindupString("WebDesign",{
     pace: (char) => (char === " " ? 50 : 80)
    })
 

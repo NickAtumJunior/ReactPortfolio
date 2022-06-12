@@ -21,7 +21,7 @@ function About() {
       <div className="about-two">
         <div className="skills">
           <center>
-            <h1>{skill}</h1>
+            <h1 className="heads">{skill}</h1>
           </center>
           <ul className="techstack">
             <li>HTML5</li>
@@ -44,7 +44,7 @@ function About() {
         </div>
         <div className="super">
           <center>
-            <h1>{social}</h1>
+            <h1 className="heads">{social}</h1>
           </center>
 
           <table>
