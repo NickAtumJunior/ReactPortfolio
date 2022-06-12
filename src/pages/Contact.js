@@ -1,9 +1,23 @@
 import { Email, Facebook, GitHub, Language, LinkedIn, WhatsApp } from "@mui/icons-material";
 import { Button, IconButton, Stack, TextField } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useWindupString } from "windups";
+import emailjs from 'emailjs-com'
 
 function Contact() {
+  const [msg,setmsg] = useState('');
+  const [err,seterr] = useState('')
+
+  function sendEmail(e){
+    e.preventDefault()
+    emailjs.sendForm("service_w5y5nyi","template_cxg9prq",e.target,"hDGzehktfnxj6v6-b")
+    .then
+    (res =>{
+      setmsg('Message send succesfully' );
+    }).catch(err => {
+      seterr('Message not send or You are offline');
+    })
+  }
 
   const [head] = useWindupString("Contact Me",{
     pace: (char) => (char === " " ? 50 : 80)
@@ -14,7 +28,7 @@ function Contact() {
       <div className="contact-left">{/* this is for empty space */}</div>
       <div className="contact-right">
         <center>
-          <form>
+          <form onSubmit={sendEmail}>
             <Stack spacing={3}>
               <center>
                 <h1 className="contacthead">{head}</h1>
@@ -23,21 +37,24 @@ function Contact() {
                 id="filled-basic"
                 label="Username"
                 variant="outlined"
+                name="username"
                 fullWidth
               />
               <TextField
                 id="filled-basic"
                 label="Email"
                 variant="outlined"
+                name="useremail"
                 fullWidth
               />
               <TextField
                 id="filled-basic"
                 label="Message"
                 variant="outlined"
+                name="message"
                 fullWidth
               />
-              <Button variant="outlined">Submit</Button>
+              <Button variant="outlined" type="submit">Submit</Button>
             </Stack>
           </form>
         </center>
@@ -132,6 +149,8 @@ function Contact() {
               </label>
             </li>
           </ul>
+          <center><h1 style={{color:'green'}}>{msg}</h1></center>
+        <center><h1 style={{color:'red'}}>{err}</h1></center>
            </center>
         </div>
       </div>

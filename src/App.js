@@ -15,6 +15,7 @@ function App() {
     color: "white",
     fontSize: "1em",
     textDecoration: "none",
+    fontFamily: '"Raleway", sans-serif'
   };
 
   const style = {

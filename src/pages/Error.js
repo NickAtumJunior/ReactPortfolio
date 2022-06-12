@@ -5,9 +5,7 @@ function Error() {
  
   return (
     <div className='error'>
-      
-      <center><h1 className='headserr'>Sorry Buddy You're In Wrong Arena</h1></center>
-      <img alt='error-bot' src='https://drive.google.com/uc?export=download&id=1IZwaBDnqEVospSb40O17kcJaDcIFhV5e' width='50%'/>
+      {/* empty ....it's for only contain space */}
     </div>
   )
 }
